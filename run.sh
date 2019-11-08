@@ -5,10 +5,6 @@
 #
 # Install Dependencies
 # 1) apt-get update && apt-get install nmap
-# 2) curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
-# 3) chmod 755 msfinstall
-# 4) ./msfinstall
-
 #
 #########################################################
 clear
@@ -39,18 +35,6 @@ if [ -e /usr/bin/nmap ]
   	echo 'Please update repos and run apt-get install nmap'
   	echo 'Bailing!'
 	  exit
-fi
-echo
-
-echo 'Checking for Metasploit...'
-if [ -e /usr/bin/msfconsole ]
-  then
-	  echo 'Metasploit binaries found!'
-  else
-  	echo 'Error: Metasploit binaries NOT FOUND!'
-  	echo 'Please update repos and run the steps for metasploit!'
-  	echo 'Bailing!'
-    exit
 fi
 echo
 
